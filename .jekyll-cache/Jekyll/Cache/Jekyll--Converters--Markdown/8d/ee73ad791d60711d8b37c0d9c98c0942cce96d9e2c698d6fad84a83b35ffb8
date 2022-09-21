@@ -1,0 +1,35 @@
+I"�<p>#</p>
+
+<h2 id="jquery-教程">jQuery 教程</h2>
+
+<h2 id="jquery-库---特性">jQuery 库 - 特性</h2>
+
+<p>jQuery 是一个 JavaScript 函数库。</p>
+
+<p>jQuery 库包含以下特性：</p>
+
+<ul>
+  <li>HTML 元素选取</li>
+  <li>HTML 元素操作</li>
+  <li>CSS 操作</li>
+  <li>HTML 事件函数</li>
+  <li>JavaScript 特效和动画</li>
+  <li>HTML DOM 遍历和修改</li>
+  <li>AJAX</li>
+  <li>Utilities</li>
+</ul>
+
+<h2 id="向页面添加-jquery-库">向页面添加 jQuery 库</h2>
+
+<p>jQuery 库位于一个 JavaScript 文件中，其中包含了所有的 jQuery 函数。</p>
+
+<p>可以通过下面的标记把 jQuery 添加到网页中：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">head</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="dl">"</span><span class="s2">text/javascript</span><span class="dl">"</span> <span class="nx">src</span><span class="o">=</span><span class="dl">"</span><span class="s2">jquery.js</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/head</span><span class="err">&gt;
+</span></code></pre></div></div>
+
+<p>请注意，<script> 标签应该位于页面的 &lt;head&gt; 部分。</script></p>
+
+:ET

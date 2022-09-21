@@ -1,0 +1,13 @@
+<svg width="140" height="33" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>background</title>
+  <rect x="-1" y="-1" width="142" height="35" id="canvas_background" fill="none"/>
+ </g>
+
+ <g>
+  <title>Layer 1</title>
+  <rect y="8.8" width="26.88" height="19.2" rx="9.6" fill="#F6B141" id="svg_1"/>
+  <rect stroke="#f6b141" fill="white" transform="rotate(63.3106803894043 32.10158157348633,13.580450057983398) " x="22.074389" y="8.006144" width="20.054383" height="11.148612" rx="6" stroke-width="5" id="svg_2"/>
+  <text stroke="#000" transform="matrix(1.0130038261413574,0,0,1,-0.731465220451355,0) " font-weight="normal" xml:space="preserve" text-anchor="start" font-family="Euphoria, sans-serif" font-size="24" id="svg_4" y="25.967383" x="62.324851" stroke-width="0" fill="#000000">幻 想</text>
+ </g>
+</svg>

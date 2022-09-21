@@ -1,0 +1,361 @@
+I"�7<h1 id="javascript-基本知识">JavaScript 基本知识</h1>
+
+<hr />
+
+<p>JavaScript 没有任何打印或者输出的函数。</p>
+
+<h2 id="javascript-显示数据">JavaScript 显示数据</h2>
+
+<p>JavaScript 可以通过不同的方式来输出数据：</p>
+
+<ul>
+  <li>使用 <strong>window.alert()</strong> 弹出警告框。</li>
+  <li>使用 <strong>document.write()</strong> 方法将内容写到 HTML 文档中。</li>
+  <li>使用 <strong>innerHTML</strong> 写入到 HTML 元素。</li>
+  <li>使用 <strong>console.log()</strong> 写入到浏览器的控制台。</li>
+</ul>
+
+<h1 id="操作-html-元素">操作 HTML 元素</h1>
+
+<hr />
+
+<p>如需从 JavaScript 访问某个 HTML 元素，您可以使用 <strong>document.getElementById(<em>id</em>)</strong> 方法。</p>
+
+<p>使用 “id” 属性来标识 HTML 元素， innerHTML 用来获取或插入元素内容：</p>
+
+<h2 id="实例">实例</h2>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+
+<span class="nt">&lt;h1&gt;</span>我的第一个 Web 页面<span class="nt">&lt;/h1&gt;</span>
+
+<span class="nt">&lt;p</span> <span class="na">id=</span><span class="s">"demo"</span><span class="nt">&gt;</span>我的第一个段落<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;script&gt;</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">"</span><span class="s2">demo</span><span class="dl">"</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">段落已修改。</span><span class="dl">"</span><span class="p">;</span>
+<span class="nt">&lt;/script&gt;</span>
+
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p>以上 JavaScript 语句（在 <script> 标签中）可以在 web 浏览器中执行：</script></p>
+
+<p><strong>document.getElementById(“demo”)</strong> 是使用 id 属性来查找 HTML 元素的 JavaScript 代码 。</p>
+
+<p><strong>innerHTML = “段落已修改。”</strong> 是用于修改元素的 HTML 内容(innerHTML)的 JavaScript 代码。</p>
+
+<p><img src="https://m.runoob.com/images/lamp.jpg" alt="Note" /><strong>请使用 document.write() 仅仅向文档输出写内容。</strong></p>
+
+<p><strong>如果在文档已完成加载后执行 document.write，整个 HTML 页面将被覆盖。</strong></p>
+
+<h1 id="javascript-语句标识符">JavaScript 语句标识符</h1>
+
+<hr />
+
+<p>JavaScript 语句通常以一个 <strong>语句标识符</strong> 为开始，并执行该语句。</p>
+
+<p>语句标识符是保留关键字不能作为变量名使用。</p>
+
+<p>下表列出了 JavaScript 语句标识符 (关键字) ：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">语句</th>
+      <th style="text-align: left">描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">break</td>
+      <td style="text-align: left">用于跳出循环。</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">catch</td>
+      <td style="text-align: left">语句块，在 try 语句块执行出错时执行 catch 语句块。</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">continue</td>
+      <td style="text-align: left">跳过循环中的一个迭代。</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">do … while</td>
+      <td style="text-align: left">执行一个语句块，在条件语句为 true 时继续执行该语句块。</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">for</td>
+      <td style="text-align: left">在条件语句为 true 时，可以将代码块执行指定的次数。</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">for … in</td>
+      <td style="text-align: left">用于遍历数组或者对象的属性（对数组或者对象的属性进行循环操作）。</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">function</td>
+      <td style="text-align: left">定义一个函数</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">if … else</td>
+      <td style="text-align: left">用于基于不同的条件来执行不同的动作。</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">return</td>
+      <td style="text-align: left">退出函数</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">switch</td>
+      <td style="text-align: left">用于基于不同的条件来执行不同的动作。</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">throw</td>
+      <td style="text-align: left">抛出（生成）错误 。</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">try</td>
+      <td style="text-align: left">实现错误处理，与 catch 一同使用。</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">var</td>
+      <td style="text-align: left">声明一个变量。</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">while</td>
+      <td style="text-align: left">当条件语句为 true 时，执行语句块。</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="空格">空格</h2>
+
+<p>JavaScript 会忽略多余的空格。您可以向脚本添加空格，来提高其可读性。下面的两行代码是等效的：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">person</span><span class="o">=</span><span class="dl">"</span><span class="s2">robob</span><span class="dl">"</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">person</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">robot</span><span class="dl">"</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h1 id="javascript注释">JavaScript注释</h1>
+
+<p>多行注释以 /* 开始，以 */ 结尾。</p>
+
+<p>单行注释以 // 开头</p>
+
+<h1 id="javascript-数据类型">JavaScript 数据类型</h1>
+
+<h2 id="变量">变量</h2>
+
+<p>可以使用短名称（比如 x 和 y），也可以使用描述性更好的名称（比如 age, sum, totalvolume）。</p>
+
+<ul>
+  <li>变量必须以字母开头</li>
+  <li>变量也能以 $ 和 _ 符号开头（不过我们不推荐这么做）</li>
+  <li>变量名称对大小写敏感（y 和 Y 是不同的变量）</li>
+</ul>
+
+<p>JavaScript 变量还能保存其他数据类型，比如文本值 (name=”Bill Gates”)。</p>
+
+<p>在 JavaScript 中，类似 “Bill Gates” 这样一条文本被称为字符串。</p>
+
+<p>当您向变量分配文本值时，应该用双引号或单引号包围这个值。</p>
+
+<p>当您向变量赋的值是数值时，不要使用引号。一条语句，多个变量</p>
+
+<h2 id="变量声明">变量声明</h2>
+
+<h2 id="javascript-声明提升"><strong>JavaScript 声明提升</strong></h2>
+
+<p>JavaScript 中，函数及变量的声明都将被提升到函数的最顶部。</p>
+
+<p>JavaScript 中，变量可以在使用后声明，也就是变量可以先使用再声明</p>
+
+<p>您可以在一条语句中声明很多变量。该语句以 var 开头，并使用逗号分隔变量即可：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">lastname</span><span class="o">=</span><span class="dl">"</span><span class="s2">Doe</span><span class="dl">"</span><span class="p">,</span> <span class="nx">age</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="nx">job</span><span class="o">=</span><span class="dl">"</span><span class="s2">carpenter</span><span class="dl">"</span><span class="p">;</span>
+<span class="c1">//声明也可横跨多行：</span>
+</code></pre></div></div>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">lastname</span><span class="o">=</span><span class="dl">"</span><span class="s2">Doe</span><span class="dl">"</span><span class="p">,</span>
+<span class="nx">age</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+<span class="nx">job</span><span class="o">=</span><span class="dl">"</span><span class="s2">carpenter</span><span class="dl">"</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>一条语句中声明的多个变量不可以同时赋同一个值:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var x,y,z=1;
+</code></pre></div></div>
+
+<h2 id="重新声明-javascript-变量">重新声明 JavaScript 变量</h2>
+
+<p>如果重新声明 JavaScript 变量，该变量的值不会丢失：</p>
+
+<p>在以下两条语句执行后，变量 carname 的值依然是 “Volvo”：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">carname</span><span class="o">=</span><span class="dl">"</span><span class="s2">Volvo</span><span class="dl">"</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">carname</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h1 id="javascript-算数">JavaScript 算数</h1>
+
+<p>您可以通过 JavaScript 变量来做算数，使用的是 = 和 + 这类运算符：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">y</span><span class="o">=</span><span class="mi">5</span><span class="p">;</span> <span class="nx">x</span><span class="o">=</span><span class="nx">y</span><span class="o">+</span><span class="mi">2</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h1 id="javascript-字面量">JavaScript 字面量</h1>
+
+<p>在编程语言中，一般固定值称为字面量，如 3.14。</p>
+
+<ul>
+  <li><strong>数字（Number）字面量</strong> 可以是整数或者是小数，或者是科学计数(e)。3.14 ,1001,123e5</li>
+  <li><strong>字符串（String）字面量</strong> 可以使用单引号或双引号。”John Doe”,’John Doe’</li>
+  <li><strong>表达式字面量</strong> 用于计算：5 * 10</li>
+  <li><strong>数组（Array）字面量</strong> 定义一个数组：[40, 100, 1, 5, 25, 10]</li>
+  <li><strong>对象（Object）字面量</strong> 定义一个对象：{firstName:”John”, lastName:”Doe”, age:50, eyeColor:”blue”}</li>
+  <li><strong>函数（Function）字面量</strong> 定义一个函数：function myFunction(a, b) { return a * b;}</li>
+</ul>
+
+<p>JavaScript语言有多种类型的运算符：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">类型</th>
+      <th style="text-align: left">实例</th>
+      <th style="text-align: left">描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">赋值，算术和位运算符</td>
+      <td style="text-align: left">= + - * /</td>
+      <td style="text-align: left">在 JS 运算符中描述</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">条件，比较及逻辑运算符</td>
+      <td style="text-align: left">== != &lt; &gt;</td>
+      <td style="text-align: left">在 JS 比较运算符中描述</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="javascript-关键字">JavaScript 关键字</h1>
+
+<p>JavaScript 关键字用于标识要执行的操作。和其他任何编程语言一样，JavaScript 保留了一些关键字为自己所用。</p>
+
+<p>以下是 JavaScript 中最重要的保留字（按字母顺序）：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>abstract</th>
+      <th>else</th>
+      <th>instanceof</th>
+      <th>super</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>boolean</td>
+      <td>enum</td>
+      <td>int</td>
+      <td>switch</td>
+    </tr>
+    <tr>
+      <td>break</td>
+      <td>export</td>
+      <td>interface</td>
+      <td>synchronized</td>
+    </tr>
+    <tr>
+      <td>byte</td>
+      <td>extends</td>
+      <td>let</td>
+      <td>this</td>
+    </tr>
+    <tr>
+      <td>case</td>
+      <td>false</td>
+      <td>long</td>
+      <td>throw</td>
+    </tr>
+    <tr>
+      <td>catch</td>
+      <td>final</td>
+      <td>native</td>
+      <td>throws</td>
+    </tr>
+    <tr>
+      <td>char</td>
+      <td>finally</td>
+      <td>new</td>
+      <td>transient</td>
+    </tr>
+    <tr>
+      <td>class</td>
+      <td>float</td>
+      <td>null</td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <td>const</td>
+      <td>for</td>
+      <td>package</td>
+      <td>try</td>
+    </tr>
+    <tr>
+      <td>continue</td>
+      <td>function</td>
+      <td>private</td>
+      <td>typeof</td>
+    </tr>
+    <tr>
+      <td>debugger</td>
+      <td>goto</td>
+      <td>protected</td>
+      <td>var</td>
+    </tr>
+    <tr>
+      <td>default</td>
+      <td>if</td>
+      <td>public</td>
+      <td>void</td>
+    </tr>
+    <tr>
+      <td>delete</td>
+      <td>implements</td>
+      <td>return</td>
+      <td>volatile</td>
+    </tr>
+    <tr>
+      <td>do</td>
+      <td>import</td>
+      <td>short</td>
+      <td>while</td>
+    </tr>
+    <tr>
+      <td>double</td>
+      <td>in</td>
+      <td>static</td>
+      <td>with</td>
+    </tr>
+  </tbody>
+</table>
+
+<h1 id="javascript-函数">JavaScript 函数</h1>
+
+<p>JavaScript 语句可以写在函数内，函数可以重复引用：</p>
+
+<p><strong>引用一个函数</strong> = 调用函数(执行函数内的语句)。</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">myFunction</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">a</span> <span class="o">*</span> <span class="nx">b</span><span class="p">;</span>     <span class="c1">// 返回a乘以b的结果</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="javascript-字母大小写">JavaScript 字母大小写</h1>
+
+<p>JavaScript 对大小写是敏感的。</p>
+
+:ET

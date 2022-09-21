@@ -1,0 +1,135 @@
+.article {
+  margin-bottom: 40px;
+
+  .article__wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .article__image {
+    width: 50%;
+    display: block;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: $light-gray;
+	border-radius: 5px;
+    transition-property: filter,transform,box-shadow;
+    transition-duration: 0.2s,0.2s,0.2s;
+    &:hover {
+      opacity: 1;
+	  box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+	 
+	  transform: scale(1.02);
+    }
+
+    &:after {
+      content: "";
+      display: table;
+      width: 100%;
+      padding-bottom: 70%;
+    }
+  }
+
+  .article__content {
+    width: 60%;
+    padding: 50px;
+    margin-left: -10%;
+    z-index: 1;
+    border-radius: 7px;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    &:hover {
+          box-shadow: 3px 6px 3px rgba(0,0,0,0.3);
+        }
+
+    .article__tag {
+      font-size: 15px;
+      letter-spacing: 1px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .article__title {
+      margin-bottom: 20px;
+      font-size: 25px;
+      
+      a {
+        color: $dark;
+        &:hover {
+          color: $black;
+        }
+      }
+    }
+
+    .article__excerpt {
+      margin-bottom: 20px;
+      font-size: 16px;
+      line-height: 26px;
+    }
+
+    .article__meta {
+      font-size: 12px;
+      line-height: 18px;
+      text-transform: uppercase;
+      color: $gray;
+    }
+
+    .article__footer {
+      display: flex;
+      align-items: center;
+
+      .read-more {
+        margin-left: auto;
+        padding-bottom: 5px;
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        border-bottom: 1px solid transparent;
+        color: orange;
+        &:hover {
+          color: $dark;
+          font-size: 15px;
+          border-color: $brand-color;
+		  font-weight: black;
+        }
+      }
+    }
+  }
+
+  .article-without-image {
+    width: 100%;
+    margin-left: auto;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    .article__wrapper {
+      flex-direction: column;
+    }
+
+    .article__image {
+      width: 100%;
+    }
+
+    .article__content {
+      width: 90%;
+      padding: 20px;
+      margin: -10% 0 0 0;
+    }
+
+    .article-without-image {
+      width: 90%;
+      margin: 0;
+    }
+  }
+
+  @media only screen and (max-width: $mobile) {
+    .article__content {
+
+      .article__title {
+        font-size: 27px;
+      }
+    }
+  }
+}

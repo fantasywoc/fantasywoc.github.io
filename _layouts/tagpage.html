@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<div class="arhive-head">
+  <div class="container">
+    <h1 class="archive-title"><span>{{ page.tag }}</span></h1>
+  </div>
+</div>
+<div class="post">
+
+<ul>
+{% for post in site.tags[page.tag] %}
+    {% include article-content.html %}
+{% endfor %}
+</ul>
+</div>
+<hr>

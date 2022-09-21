@@ -1,0 +1,53 @@
+
+
+bundle add webrick
+
+
+config  内容
+
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+[remote "origin"]
+	url = https://gitee.com/fantasy-s/fantasy-s.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+
+
+1初始化
+git init 
+
+2、将当前目录下所有需要上传的文件代码等资源添加到缓存区
+git add .
+
+
+
+3、 提交缓存区里面的主要内容到本地仓库
+git commit -m "提交说明"
+
+
+4、添加一个远程仓库的地址
+git remote add origin  https://gitee.com/fantasy-s/fantasy-s.git
+
+5、提交本地仓库到远程仓库
+git push -u origin master
+
+
+
+后续网站更新
+git add *
+git commit -m "更新描述"
+git push -u origin master
+
+
+
+git push -u origin +master   强制推送覆盖
+
+
+
+

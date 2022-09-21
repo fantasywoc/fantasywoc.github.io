@@ -1,0 +1,63 @@
+I"<p>my dock 和 my finder 是两款仿mac os 的工具，还原度非常高，让你的桌面简洁，高效。
+软件作者是：<strong>№じ 尐乄鈊~→</strong> ，易语言编写。
+<strong>在此感谢大佬</strong>
+<strong><em>文末软件和壁纸下载链接</em></strong>
+用过乌班图和deepin系统之后，就有点离不开dock栏了，非常简洁快捷，回到windows后，有点不太适应，所以就找到了这款仿Mac OS的dock的软件（还有其他的几个dock软件，my dock体验最佳），虽然刚开始软件有些许bug,通过作者大大这么长时间的努力优化，软件慢慢趋近于完美。没有玩过mac的也可以可以体验一下苹果的界面风格。
+<em>**</em></p>
+<center><p>https://www.0dutv.com/upload/dance/660177BCDB0F1F5F4A01433EFEA59208.mp3</p></center>
+<p><a href="#"><center><strong>##五月天-剩下光年</strong></center></a></p>
+
+<p><strong>侧面/下面是my dock,上面是my finder</strong>
+<img src="https://upload-images.jianshu.io/upload_images/4041783-3ff89cbda99b9418.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /><img src="https://upload-images.jianshu.io/upload_images/4041783-3000fc0b75baacbd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /><img src="https://upload-images.jianshu.io/upload_images/4041783-0ee5f536f8d960d6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /></p>
+
+<p>应用最小化，窗口缩小到dock里面会有一个非常舒服的过渡动画，软件提供三种动画效果供用户（根据自身的爱好和硬件情况）选择：神奇效果，吮吸效果，和缩放效果。<br /><strong>神奇效果</strong> (个人比较喜欢神奇效果，动画比较圆润) <img src="https://upload-images.jianshu.io/upload_images/4041783-fd53ee9e06791d8d.gif?imageMogr2/auto-orient/strip" alt="" /><strong>吮吸效果</strong>
+<img src="https://upload-images.jianshu.io/upload_images/4041783-8aec0762a2c3d7e3.gif?imageMogr2/auto-orient/strip" alt="" /><strong>缩放效果</strong>
+<img src="https://upload-images.jianshu.io/upload_images/4041783-ce0c7cff9f2c625b.gif?imageMogr2/auto-orient/strip" alt="" /><strong>点击打开应用，图标有弹跳的动画，并在下面显示一个圆点，代表此应用的状态。</strong>（打开与否）<img src="https://upload-images.jianshu.io/upload_images/4041783-38e2ee00b07c3067.gif?imageMogr2/auto-orient/strip" alt="" /></p>
+
+<p>安装过程：
+1、<strong>My Dock</strong>
+解压文件将 dock4.1文件夹里的 MyDock4.1 文件夹复制到你想要安装的位置，打开双击 dock.exe 即可运行
+2、<strong>My Finder</strong>
+打开  <em>MyFinder完整包 2.4</em>    双击 <em>安装程序Finder.exe</em>更改安装安装位置，勾选创建快捷方式（如不勾选也可在安装目录打开）</p>
+
+<p>注意！<strong>此时win10任务栏可能会影响显示</strong>
+<strong>打开dock设置，在应用与下载位置文件夹之间有一个比较大的空隙，将鼠标放在空隙处右击，偏好设置</strong>左下角有一个太阳/月亮标志，点击可以切换窗口黑白色。</p>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/4041783-d17f088c76bed32d.gif?imageMogr2/auto-orient/strip" alt="" />在偏好设置—高级—勾选<strong>启动时自动隐藏工具栏</strong>（为了dock和finder更好的体验），勾选<strong>开机自启动</strong>，勾选<strong>自动更新</strong>后，现在可以更新到4.3，目前最稳定的优化的最好的），然后点击  关于—重启dock。</p>
+
+<p>开机启动设置“修复开机启动（内附修改方法).reg”右键用记事本打开，将”MyDock”=” ~~~~“中的路径替换为my dock的路径，注意双斜杠，保存，然后双击打开。</p>
+
+<p>dock改变大小快捷方式:在弹出设置的空白处鼠标左键按着不松，上下/左右拉即可直接调整dock大小<img src="https://upload-images.jianshu.io/upload_images/4041783-076d85d7519a6728.gif?imageMogr2/auto-orient/strip" alt="" /></p>
+
+<p><strong>My Dock介绍</strong>
+桌面图标可直接拖拽进入dock   或者LanchPad（即第二个图标）
+LanchPad放图标的第二种方式，打开你的MyDock目录，里面有个launchpad的文件夹，将软件的快捷方式粘贴在里面。
+右击可以更改图标，在LanchPad中左键点住不松，即可删除和更换图标</p>
+
+<p><strong>dock可以自定义放在左边，底边和右边</strong><img src="https://upload-images.jianshu.io/upload_images/4041783-83ccaffa0cb223b5.gif?imageMogr2/auto-orient/strip" alt="" />
+在设置里<strong>点击通用设置</strong>：
+缩放后图标大小 可以调节鼠标移入dock时，图标的放大程度。
+图标间的距离都懂。<img src="https://upload-images.jianshu.io/upload_images/4041783-7eec9f37417cc6bb.gif?imageMogr2/auto-orient/strip" alt="" /></p>
+
+<p><br />
+<strong>**
+**My Finder介绍</strong></p>
+
+<p>常用的几个功能!<img src="https://upload-images.jianshu.io/upload_images/4041783-3ad7a60acaba3401.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" /></p>
+
+<p>单击 苹果标志右边 字母（字母为当前所在窗口软件的名称）— 偏好设置，即可进入My Finder设置，就可以自定义你的任务栏（不要忘记勾选开机自启和启动时隐藏任务栏）<img src="https://upload-images.jianshu.io/upload_images/4041783-538491bded5b5202.gif?imageMogr2/auto-orient/strip" alt="" /></p>
+
+<p>My Finder支持微信、Tim\QQ、U盘新消息弹窗消息提醒<img src="https://upload-images.jianshu.io/upload_images/4041783-e1d275389ace2084.gif?imageMogr2/auto-orient/strip" alt="" /></p>
+
+<p>当然还有很多设置，由于Gif录制软件录不到My Finder，所以就不做过多的介绍了，自行探索吧！
+总之功能强大，非常优秀的的两款软件</p>
+
+<p><strong><a href="https://pan.baidu.com/s/1FnTGxMTMhm2iv4lxeZs-gQ">软件包和桌面壁纸下载</a></strong>[https://pan.baidu.com/s/1FnTGxMTMhm2iv4lxeZs-gQ
+]提取密码:8j9n</p>
+
+<p>##<a href="https://www.jianshu.com/p/0164be382556">win10  主题美化教程</a></p>
+
+<ul>
+  <li>END -</li>
+</ul>
+:ET

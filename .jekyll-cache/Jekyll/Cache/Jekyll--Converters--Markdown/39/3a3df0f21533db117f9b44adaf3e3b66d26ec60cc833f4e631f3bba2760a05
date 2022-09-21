@@ -1,0 +1,384 @@
+I"od<h1 id="js语句">js语句</h1>
+
+<h2 id="javascript-语句标识符">JavaScript 语句标识符</h2>
+
+<p>JavaScript 语句通常以一个 <strong>语句标识符</strong> 为开始，并执行该语句。</p>
+
+<p>语句标识符是保留关键字不能作为变量名使用。</p>
+
+<p>下表列出了 JavaScript 语句标识符 (关键字) ：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">语句</th>
+      <th style="text-align: left">描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">break</td>
+      <td style="text-align: left">用于跳出循环。</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">catch</td>
+      <td style="text-align: left">语句块，在 try 语句块执行出错时执行 catch 语句块。</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">continue</td>
+      <td style="text-align: left">跳过循环中的一个迭代。</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">do … while</td>
+      <td style="text-align: left">执行一个语句块，在条件语句为 true 时继续执行该语句块。</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">for</td>
+      <td style="text-align: left">在条件语句为 true 时，可以将代码块执行指定的次数。</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">for … in</td>
+      <td style="text-align: left">用于遍历数组或者对象的属性（对数组或者对象的属性进行循环操作）。</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">function</td>
+      <td style="text-align: left">定义一个函数</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">if … else</td>
+      <td style="text-align: left">用于基于不同的条件来执行不同的动作。</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">return</td>
+      <td style="text-align: left">退出函数</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">switch</td>
+      <td style="text-align: left">用于基于不同的条件来执行不同的动作。</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">throw</td>
+      <td style="text-align: left">抛出（生成）错误 。</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">try</td>
+      <td style="text-align: left">实现错误处理，与 catch 一同使用。</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">var</td>
+      <td style="text-align: left">声明一个变量。</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">while</td>
+      <td style="text-align: left">当条件语句为 true 时，执行语句块。</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="函数">函数</h2>
+
+<h3 id="传入参数可以是任意类型">传入参数可以是任意类型，</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//函数可以传入任意数据类型的参数</span>
+<span class="kd">function</span> <span class="nx">sayself</span><span class="p">(</span><span class="nx">o</span><span class="p">){</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">o</span><span class="p">.</span><span class="nx">address</span><span class="o">+</span><span class="nx">o</span><span class="p">.</span><span class="nx">name</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="kd">var</span> <span class="nx">obj</span><span class="o">=</span><span class="p">{</span><span class="na">address</span><span class="p">:</span><span class="dl">"</span><span class="s2">花果山水帘洞</span><span class="dl">"</span><span class="p">,</span><span class="na">name</span><span class="p">:</span><span class="dl">"</span><span class="s2">孙悟空</span><span class="dl">"</span><span class="p">};</span>
+<span class="nx">sayself</span><span class="p">(</span><span class="nx">obj</span><span class="p">);</span>
+<span class="c1">//return 返回值可以是任意对象，return执行之后便会结束函数</span>
+</code></pre></div></div>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">函数定义完立即执行函数，一般只执行一次</span><span class="dl">"</span><span class="p">)</span>
+<span class="p">})();</span>
+</code></pre></div></div>
+
+<h3 id="this-关键字">this 关键字</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//this用法，一般而言，在Javascript中，this指向函数执行时的当前对象。</span>
+<span class="c1">//根据调用的不同，this指向不同对象</span>
+<span class="c1">////以函数形式调用时。this永远都是window。以方法形式调用时，this永远都是调用方法的对象</span>
+<span class="kd">function</span> <span class="nx">myfun</span><span class="p">(){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kd">var</span> <span class="nx">obj1</span><span class="o">=</span><span class="p">{</span><span class="na">address</span><span class="p">:</span><span class="dl">"</span><span class="s2">未知</span><span class="dl">"</span><span class="p">,</span><span class="na">name</span><span class="p">:</span><span class="dl">"</span><span class="s2">六耳猕猴</span><span class="dl">"</span><span class="p">,</span><span class="na">sayname</span><span class="p">:</span><span class="nx">myfun</span><span class="p">};</span>
+<span class="nx">obj</span><span class="p">.</span><span class="nx">sayname</span><span class="p">();</span>
+<span class="nx">obj1</span><span class="p">.</span><span class="nx">sayname</span><span class="p">();</span>
+
+
+</code></pre></div></div>
+
+<h3 id="作为函数方法调用函数">作为函数方法调用函数</h3>
+
+<p>在 JavaScript 中, 函数是对象。JavaScript 函数有它的属性和方法。</p>
+
+<p><strong>call()</strong> 和 <strong>apply()</strong> 是预定义的函数方法。 两个方法可用于调用函数，两个方法的第一个参数必须是对象本身。</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">myFunction</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> <span class="p">{</span>    <span class="k">return</span> <span class="nx">a</span> <span class="o">*</span> <span class="nx">b</span><span class="p">;</span> <span class="p">}</span> 
+<span class="nx">myObject</span> <span class="o">=</span> <span class="nx">myFunction</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">myObject</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>     <span class="c1">// 返回 20</span>
+</code></pre></div></div>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">myFunction</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">)</span> 
+<span class="p">{</span>    <span class="k">return</span> <span class="nx">a</span> <span class="o">*</span> <span class="nx">b</span><span class="p">;</span> <span class="p">}</span> 
+<span class="nx">myArray</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">];</span>
+<span class="nx">myObject</span> <span class="o">=</span> <span class="nx">myFunction</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">myObject</span><span class="p">,</span> <span class="nx">myArray</span><span class="p">);</span>  <span class="c1">// 返回 20</span>
+</code></pre></div></div>
+
+<p>两个方法都使用了对象本身作为第一个参数。 两者的区别在于第二个参数： apply传入的是一个参数数组，也就是将多个参数组合成为一个数组传入，而call则作为call的参数传入（从第二个参数开始）。</p>
+
+<p>在 JavaScript 严格模式(strict mode)下, 在调用函数时第一个参数会成为 <strong>this</strong> 的值， 即使该参数不是一个对象。</p>
+
+<p>在 JavaScript 非严格模式(non-strict mode)下, 如果第一个参数的值是 null 或 undefined, 它将使用全局对象替代。</p>
+
+<h2 id="if条件语句与cpython类似">if条件语句（与c，python类似）</h2>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="nx">condition</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="nx">当条件为</span> <span class="kc">true</span> <span class="nx">时执行的代码</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="nx">condition</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="nx">当条件为</span> <span class="kc">true</span> <span class="nx">时执行的代码</span>
+<span class="p">}</span>
+<span class="k">else</span>
+<span class="p">{</span>
+  <span class="nx">当条件不为</span> <span class="kc">true</span> <span class="nx">时执行的代码</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="nx">condition1</span><span class="p">)</span>
+
+  <span class="nx">当条件</span> <span class="mi">1</span> <span class="nx">为</span> <span class="kc">true</span> <span class="nx">时执行的代码</span><span class="o">*</span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">condition2</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="nx">当条件</span> <span class="mi">2</span> <span class="nx">为</span> <span class="kc">true</span> <span class="nx">时执行的代码</span>
+<span class="p">}</span>
+<span class="k">else</span>
+<span class="p">{</span>
+ <span class="nx">当条件</span> <span class="mi">1</span> <span class="nx">和</span> <span class="nx">条件</span> <span class="mi">2</span> <span class="nx">都不为</span> <span class="kc">true</span> <span class="nx">时执行的代码</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="switch-语句">switch 语句</h2>
+
+<p>请使用 switch 语句来选择要执行的多个代码块之一。</p>
+
+<p>使用 default 关键词来规定匹配不存在时做的事情（也可以不写）</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">switch</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span>
+ <span class="p">{</span>      <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>        
+ 			<span class="nx">执行代码块</span> <span class="mi">1</span>       
+ 			<span class="k">break</span><span class="p">;</span>    
+ 		<span class="k">case</span> <span class="mi">2</span><span class="p">:</span>        
+ 			<span class="nx">执行代码块</span> <span class="mi">2</span>        
+ 			<span class="k">break</span><span class="p">;</span>    
+ 		<span class="nl">default</span><span class="p">:</span>        
+ 			<span class="nx">与</span> <span class="k">case</span> <span class="mi">1</span> <span class="nx">和</span> <span class="k">case</span> <span class="mi">2</span> <span class="nx">不同时执行的代码</span> 
+ <span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="for-循环与python类似">For 循环（与python类似）</h2>
+
+<p>for 循环是您在希望创建循环时常会用到的工具。</p>
+
+<p>下面是 for 循环的语法：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="o">*</span><span class="nx">语句</span> <span class="mi">1</span><span class="o">*</span><span class="p">;</span> <span class="o">*</span><span class="nx">语句</span> <span class="mi">2</span><span class="o">*</span><span class="p">;</span> <span class="o">*</span><span class="nx">语句</span> <span class="mi">3</span><span class="o">*</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="o">*</span><span class="nx">被执行的代码块</span><span class="o">*</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>for 多次循环</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> 
+<span class="p">{</span>      
+	<span class="nx">x</span><span class="o">=</span><span class="dl">"</span><span class="s2">该数字为 </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">i</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">&lt;br&gt;</span><span class="dl">"</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>for 遍历数组</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">cars</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="nx">len</span><span class="o">=</span><span class="nx">cars</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">len</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> 
+<span class="p">{</span>     
+    <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">cars</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">&lt;br&gt;</span><span class="dl">"</span><span class="p">);</span> 
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="forin-循环">For/In 循环</h2>
+
+<p>JavaScript for/in 语句循环遍历对象的属性：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">person</span><span class="o">=</span><span class="p">{</span><span class="na">fname</span><span class="p">:</span><span class="dl">"</span><span class="s2">Bill</span><span class="dl">"</span><span class="p">,</span><span class="na">lname</span><span class="p">:</span><span class="dl">"</span><span class="s2">Gates</span><span class="dl">"</span><span class="p">,</span><span class="na">age</span><span class="p">:</span><span class="mi">56</span><span class="p">};</span>  
+<span class="k">for</span> <span class="p">(</span><span class="nx">x</span> <span class="k">in</span> <span class="nx">person</span><span class="p">)</span>  <span class="c1">// x 为属性名</span>
+<span class="p">{</span>   <span class="kd">var</span> <span class="nx">txt</span><span class="o">=</span> <span class="dl">'</span><span class="s1"> </span><span class="dl">'</span><span class="p">;</span>
+    <span class="nx">txt</span><span class="o">=</span> <span class="nx">person</span><span class="p">[</span><span class="nx">x</span><span class="p">]</span><span class="o">+</span><span class="nx">txt</span> <span class="p">;</span> 
+    <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">txt</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c1">//输出结果为：Bill Gates 56</span>
+</code></pre></div></div>
+
+<h2 id="while-循环与c语言类似">while 循环(与c语言类似)</h2>
+
+<p>while 循环会在指定条件为真时循环执行代码块。</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">do</span>
+<span class="p">{</span>
+  <span class="nx">需要执行的代码</span>
+<span class="p">}</span>
+<span class="k">while</span> <span class="p">(</span><span class="nx">条件</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="break-语句">break 语句</h2>
+
+<p>break 语句可用于跳出循环。</p>
+
+<p>break 语句跳出循环后，会继续执行该循环之后的代码</p>
+
+<h2 id="continue-语句">continue 语句</h2>
+
+<p><strong>continue 语句</strong>中断循环中的迭代，如果出现了指定的条件，然后继续循环中的下一个迭代。</p>
+
+<p>有了标签，可以使用break和continue在多层循环的时候控制外层循环。</p>
+
+<p>例如下面：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">outerloop</span><span class="p">:</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nl">innerloop</span><span class="p">:</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">j</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">break</span> <span class="nx">innerloop</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">==</span> <span class="mi">4</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">break</span> <span class="nx">outerloop</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="dl">"</span><span class="s2">i=</span><span class="dl">"</span> <span class="o">+</span> <span class="nx">i</span> <span class="o">+</span> <span class="dl">"</span><span class="s2"> j=</span><span class="dl">"</span> <span class="o">+</span> <span class="nx">j</span> <span class="o">+</span> <span class="dl">""</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="javascript-标签">JavaScript 标签</h2>
+
+<p>正如您在 switch 语句那一章中看到的，可以对 JavaScript 语句进行标记。</p>
+
+<p>如需标记 JavaScript 语句，请在语句之前加上冒号：</p>
+
+<p>label: statements</p>
+
+<p>break 和 continue 语句仅仅是能够跳出代码块的语句。</p>
+
+<p>语法:</p>
+
+<p>break labelname;   continue labelname;</p>
+
+<p>continue 语句（带有或不带标签引用）只能用在循环中。</p>
+
+<p>break 语句（不带标签引用），只能用在循环或 switch 中。</p>
+
+<p>通过标签引用，break 语句可用于跳出任何 JavaScript 代码块</p>
+
+<h2 id="对象定义">对象定义</h2>
+
+<p>你可以使用字符来定义和创建 JavaScript 对象:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kd">var</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span>
+ <span class="na">firstName</span><span class="p">:</span><span class="dl">"</span><span class="s2">John</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">lastName</span><span class="p">:</span><span class="dl">"</span><span class="s2">Doe</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">age</span><span class="p">:</span><span class="mi">50</span><span class="p">,</span>
+  <span class="na">eyeColor</span><span class="p">:</span><span class="dl">"</span><span class="s2">blue</span><span class="dl">"</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h2 id="访问对象属性">访问对象属性</h2>
+
+<p>你可以通过两种方式访问对象属性:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">person</span><span class="p">.</span><span class="nx">lastName</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="常见的html事件">常见的HTML事件</h2>
+
+<p>下面是一些常见的HTML事件的列表:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">事件</th>
+      <th style="text-align: left">描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">onchange</td>
+      <td style="text-align: left">HTML 元素改变</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">onclick</td>
+      <td style="text-align: left">用户点击 HTML 元素</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">onmouseover</td>
+      <td style="text-align: left">用户在一个HTML元素上移动鼠标</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">onmouseout</td>
+      <td style="text-align: left">用户从一个HTML元素上移开鼠标</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">onkeydown</td>
+      <td style="text-align: left">用户按下键盘按键</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">onload</td>
+      <td style="text-align: left">浏览器已完成页面的加载</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="javascript-可以做什么">JavaScript 可以做什么?</h2>
+
+<p>事件可以用于处理表单验证，用户输入，用户行为及浏览器动作:</p>
+
+<ul>
+  <li>页面加载时触发事件</li>
+  <li>页面关闭时触发事件</li>
+  <li>用户点击按钮执行动作</li>
+  <li>验证用户输入内容的合法性</li>
+  <li>等等 …</li>
+</ul>
+
+<p>可以使用多种方法来执行 JavaScript 事件代码：</p>
+
+<ul>
+  <li>HTML 事件属性可以直接执行 JavaScript 代码</li>
+  <li>HTML 事件属性可以调用 JavaScript 函数</li>
+  <li>你可以为 HTML 元素指定自己的事件处理程序</li>
+  <li>你可以阻止事件的发生。</li>
+  <li>等等 …</li>
+</ul>
+
+<h2 id="typeof-操作符">typeof 操作符</h2>
+
+<p>你可以使用 typeof 操作符来检测变量的数据类型。</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">typeof</span> <span class="dl">"</span><span class="s2">John</span><span class="dl">"</span>      <span class="c1">// 返回 string</span>
+<span class="k">typeof</span> <span class="mf">3.14</span>       <span class="c1">// 返回 number</span>
+<span class="k">typeof</span> <span class="kc">false</span>      <span class="c1">// 返回 boolean</span>
+<span class="k">typeof</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span> <span class="c1">// 返回 object//在JavaScript中，数组是一种特殊的对象类型</span>
+<span class="k">typeof</span> <span class="p">{</span><span class="na">name</span><span class="p">:</span><span class="dl">'</span><span class="s1">John</span><span class="dl">'</span><span class="p">,</span> <span class="na">age</span><span class="p">:</span><span class="mi">34</span><span class="p">}</span><span class="c1">// 返回 object</span>
+</code></pre></div></div>
+
+:ET

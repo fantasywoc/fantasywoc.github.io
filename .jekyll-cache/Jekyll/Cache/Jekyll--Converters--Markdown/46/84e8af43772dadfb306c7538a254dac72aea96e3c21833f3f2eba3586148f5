@@ -1,0 +1,141 @@
+I"w3<h1 id="javascript-对象">JavaScript 对象</h1>
+
+<p>JavaScript 中的所有事物都是对象：字符串、数值、数组、函数…</p>
+
+<p>JavaScript 提供多个内建对象，比如 String、Date、Array 等等。 对象只是带有属性和方法的特殊数据类型。</p>
+
+<ul>
+  <li>布尔型可以是一个对象。</li>
+  <li>数字型可以是一个对象。</li>
+  <li>字符串也可以是一个对象</li>
+  <li>日期是一个对象</li>
+  <li>数学和正则表达式也是对象</li>
+  <li>数组是一个对象</li>
+  <li>甚至函数也可以是对象</li>
+</ul>
+
+<h2 id="javascript-对象-1">JavaScript 对象</h2>
+
+<p>对象只是一种特殊的数据。对象拥有<strong>属性</strong>和<strong>方法</strong>。</p>
+
+<hr />
+
+<h2 id="访问对象的属性">访问对象的属性</h2>
+
+<p>属性是与对象相关的值。</p>
+
+<p>访问对象属性的语法是：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">objectName</span><span class="p">.</span><span class="nx">propertyName</span>
+</code></pre></div></div>
+
+<h2 id="使用对象构造器constructor">使用对象构造器（constructor）</h2>
+
+<p>本例使用函数来构造对象：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">person</span><span class="p">(</span><span class="nx">firstname</span><span class="p">,</span><span class="nx">lastname</span><span class="p">,</span><span class="nx">age</span><span class="p">,</span><span class="nx">eyecolor</span><span class="p">)</span>
+<span class="p">{</span>    <span class="k">this</span><span class="p">.</span><span class="nx">firstname</span><span class="o">=</span><span class="nx">firstname</span><span class="p">;</span>    					 <span class="k">this</span><span class="p">.</span><span class="nx">lastname</span><span class="o">=</span><span class="nx">lastname</span><span class="p">;</span>   
+	 <span class="k">this</span><span class="p">.</span><span class="nx">age</span><span class="o">=</span><span class="nx">age</span><span class="p">;</span>    
+	 <span class="k">this</span><span class="p">.</span><span class="nx">eyecolor</span><span class="o">=</span><span class="nx">eyecolor</span><span class="p">;</span> 
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="创建-javascript-对象实例">创建 JavaScript 对象实例</h2>
+
+<p>一旦您有了对象构造器，就可以创建新的对象实例，就像这样：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">myFather</span><span class="o">=</span><span class="k">new</span> <span class="nx">person</span><span class="p">(</span><span class="dl">"</span><span class="s2">John</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">Doe</span><span class="dl">"</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="dl">"</span><span class="s2">blue</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">myMother</span><span class="o">=</span><span class="k">new</span> <span class="nx">person</span><span class="p">(</span><span class="dl">"</span><span class="s2">Sally</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">Rally</span><span class="dl">"</span><span class="p">,</span><span class="mi">48</span><span class="p">,</span><span class="dl">"</span><span class="s2">green</span><span class="dl">"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h2 id="把方法添加到-javascript-对象">把方法添加到 JavaScript 对象</h2>
+
+<p>方法只不过是附加在对象上的函数。</p>
+
+<p>在构造器函数内部定义对象的方法：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">person</span><span class="p">(</span><span class="nx">firstname</span><span class="p">,</span><span class="nx">lastname</span><span class="p">,</span><span class="nx">age</span><span class="p">,</span><span class="nx">eyecolor</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">firstname</span><span class="o">=</span><span class="nx">firstname</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">lastname</span><span class="o">=</span><span class="nx">lastname</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">age</span><span class="o">=</span><span class="nx">age</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">eyecolor</span><span class="o">=</span><span class="nx">eyecolor</span><span class="p">;</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">changeName</span><span class="o">=</span><span class="nx">changeName</span><span class="p">;</span>
+    <span class="kd">function</span> <span class="nx">changeName</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">lastname</span><span class="o">=</span><span class="nx">name</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="javascript-forin-循环">JavaScript for…in 循环</h2>
+
+<p>JavaScript for…in 语句循环遍历对象的属性。</p>
+
+<h3 id="语法">语法</h3>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="nx">variable</span> <span class="k">in</span> <span class="nx">object</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nx">执行的代码</span><span class="err">……</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>注意：</strong> for…in 循环中的代码块将针对每个属性执行一次。</p>
+
+<h2 id="javascript-的对象是可变的">JavaScript 的对象是可变的</h2>
+
+<p>对象是可变的，它们是通过引用来传递的。</p>
+
+<p>以下实例的 person 对象不会创建副本：</p>
+
+<p>如果修改 x ，person 的属性也会改变：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">firstName</span><span class="p">:</span><span class="dl">"</span><span class="s2">John</span><span class="dl">"</span><span class="p">,</span> 
+    <span class="na">lastName</span><span class="p">:</span><span class="dl">"</span><span class="s2">Doe</span><span class="dl">"</span><span class="p">,</span> 
+    <span class="na">age</span><span class="p">:</span><span class="mi">50</span><span class="p">,</span> 
+    <span class="na">eyeColor</span><span class="p">:</span><span class="dl">"</span><span class="s2">blue</span><span class="dl">"</span>
+<span class="p">}</span>  
+<span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="nx">person</span><span class="p">;</span> <span class="nx">x</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>  <span class="c1">// 改变x的age属性值， x.age 和 person.age 都会改变</span>
+</code></pre></div></div>
+
+<p>已存在构造器的对象中是不能添加新的属性，要添加一个新的属性需要在在构造器函数中添加。</p>
+
+<h2 id="添加属性和方法">添加属性和方法</h2>
+
+<p>有的时候我们想要在所有已经存在的对象添加新的属性或方法。</p>
+
+<p>另外，有时候我们想要在对象的构造函数中添加属性或方法。</p>
+
+<p>使用 prototype 属性就可以给对象的构造函数添加新的属性：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">first</span><span class="p">,</span> <span class="nx">last</span><span class="p">,</span> <span class="nx">age</span><span class="p">,</span> <span class="nx">eyecolor</span><span class="p">)</span> 
+<span class="p">{</span>  
+    <span class="k">this</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">=</span> <span class="nx">first</span><span class="p">;</span>  
+    <span class="k">this</span><span class="p">.</span><span class="nx">lastName</span> <span class="o">=</span> <span class="nx">last</span><span class="p">;</span> 
+    <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">age</span><span class="p">;</span>  
+    <span class="k">this</span><span class="p">.</span><span class="nx">eyeColor</span> <span class="o">=</span> <span class="nx">eyecolor</span><span class="p">;</span> 
+<span class="p">}</span>  
+<span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">nationality</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">English</span><span class="dl">"</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">myfather</span><span class="o">=</span><span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="dl">"</span><span class="s2">John</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Doe</span><span class="dl">"</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="dl">"</span><span class="s2">blue</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">My father's nationality</span><span class="dl">"</span><span class="o">+</span><span class="nx">myfather</span><span class="p">.</span><span class="nx">nationality</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>当然我们也可以使用 prototype 属性就可以给对象的构造函数添加新的方法：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">first</span><span class="p">,</span> <span class="nx">last</span><span class="p">,</span> <span class="nx">age</span><span class="p">,</span> <span class="nx">eyecolor</span><span class="p">)</span>
+<span class="p">{</span>  
+    <span class="k">this</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">=</span> <span class="nx">first</span><span class="p">;</span>  
+    <span class="k">this</span><span class="p">.</span><span class="nx">lastName</span> <span class="o">=</span> <span class="nx">last</span><span class="p">;</span>  
+    <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">age</span><span class="p">;</span>  
+    <span class="k">this</span><span class="p">.</span><span class="nx">eyeColor</span> <span class="o">=</span> <span class="nx">eyecolor</span><span class="p">;</span> 
+<span class="p">}</span>  
+<span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> 
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">firstName</span> <span class="o">+</span> <span class="dl">"</span><span class="s2"> </span><span class="dl">"</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">lastName</span><span class="p">;</span> 
+<span class="p">};</span>
+<span class="kd">var</span> <span class="nx">myfather1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="dl">"</span><span class="s2">Tom</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Doe</span><span class="dl">"</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="dl">"</span><span class="s2">black</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myfather1</span><span class="p">.</span><span class="nx">name</span><span class="p">());</span>
+</code></pre></div></div>
+
+:ET

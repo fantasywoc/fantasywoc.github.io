@@ -1,0 +1,35 @@
+<h3 id="采用格子blozmann方法求解物理问题的基本过程">采用格子Blozmann方法求解物理问题的基本过程：</h3>
+
+<p>如下图所示，对于一个特定的物理问题，首先进行辅助步骤：</p>
+<ol>
+  <li>基于各种简化假设，建立物理模型，确定出计算区域、初始条件以及边界条件的物理问题的不同，选择相应的格子Blozmann模型。</li>
+  <li>进行网格划分。</li>
+  <li>根据不同的格子Blozmann模型，选择控制方程，并对其进行离散。如采用标准格子Bolzmann方法对等温不可压缩流动进行模拟，则离散后的控制方程为LBGK方程。
+<em><strong>前三步是在数值模拟之前就进行的。随后进入数值模拟阶段；</strong></em></li>
+  <li>根据物理问题，给定所有节点上的宏观参量（密度、速度、温度、粘度系数、导热系数等），并由此计算出所有节点上各个方向的平衡态分布函数，以此作为计算的初场。</li>
+  <li>求解离散后的控制方程，例如，采用碰撞迁移规则求解LBGK方程。</li>
+  <li>根据边界条件，在相应的边界节点上实施边界处理格式。</li>
+  <li>基于不同格子Bolzmann模型的宏观量的定义法则，计算各节点上的宏观参量。</li>
+  <li>判断计算是否收敛。</li>
+  <li>若计算收敛，则输出计算结果；否则返回第5步，继续求解，直到收敛为止。</li>
+</ol>
+
+<hr />
+<p><img src="/images/采用格子Boltzmann方法模拟求解的基本流程.png" alt="" height="400" width="400" /></p>
+
+<hr />
+
+<h6 id="1-分子势函任意两个分子之间的相互作用可以用一个与距离有关的势函数">1. 分子势函：任意两个分子之间的相互作用可以用一个与距离有关的势函数。</h6>
+<p>硬球分子模型认为两个分子发只有在接触时才发生作用，分子间的势函数为：</p>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+<p>\(\phi =\begin{cases}\infty ,r\leq\sigma\\ 0,r=\sigma \end{cases}\) ，r：分子之间距离。<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>\(\sigma是分子直径\)</p>
+
+<h6 id="2-逆幂律模型">2. 逆幂律模型：</h6>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+<p>\(\phi =\begin{cases}\infty ,r\leq\sigma\\ 0,r=\sigma \end{cases}\) ，r：分子之间距离。<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>\(\phi\left( r\right) =\dfrac{n}{s-1}\left( \dfrac{1}{r}\right)^{s-1}\)</p>
+
+<ul>
+  <li>END -</li>
+</ul>
