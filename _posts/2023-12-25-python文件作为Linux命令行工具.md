@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  python文件作为为Linux命令行工具
+title:  python文件作为Linux命令行工具
 date:   2023-12-25 18:18:20 +0300
 image:  wallhaven-47l7p3.jpg
 tags:   study  python  linux
