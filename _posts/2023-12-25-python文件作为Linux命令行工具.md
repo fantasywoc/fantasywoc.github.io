@@ -13,7 +13,7 @@ tags:   study  python  linux
 
 ### 1.修改文件权限
 
-将Python文件保存在Linux系统中，并添加可执行权限。可以使用 `chmod` 命令来修改文件的权限，例如：**chmod +x /path/to/your/file.py**。
+将Python文件保存在Linux系统中，并添加可执行权限。可以使用 **chmod** 命令来修改文件的权限，例如：**chmod +x /path/to/your/file.py**。
 
 ### 2.文件开头添加声明
 
