@@ -10,7 +10,7 @@ description: Not deep, just simple
 author:
   name: fantasy
   image: 01.jpg
-  say-hello: Hello, I’m <strong>Fantasy</strong>
+  say-hello:  <strong>Fantasy</strong>
   bio: 喜欢胡思乱想，编程,音乐和很多乱七八糟的事，喜欢接触和学习新的事物和技术；不求深刻，只求简单。</br></a>Love  &nbsp&nbsp&nbsp<a href="#">music</a> & <a href="#"><a href="#">making blind and disorderly conjectures</a></a>.
 
 
