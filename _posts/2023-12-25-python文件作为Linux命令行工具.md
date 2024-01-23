@@ -53,5 +53,6 @@ if __name__ == '__main__':
 ```bash
 python test.py arg1 arg2 arg3
 ```
-在上面的命令中，我们将 test.py 作为 Python 脚本文件执行，并在命令后面添加了三个参数：arg1、arg2 和 arg3。当执行此命令时，Python 解释器将读取 sys.argv 列表，并将其设置为 **['test.py', 'arg1', 'arg2', 'arg3']**。在 main() 函数中，我们使用 sys.argv[1:] 获取除了第一个元素以外的所有元素，即 ['arg1', 'arg2', 'arg3']，并将其打印输出。
+在上面的命令中，我们将 test.py 作为 Python 脚本文件执行，并在命令后面添加了三个参数：arg1、arg2 和 arg3。当执行此命令时，Python 解释器将读取 sys.argv 列表，并将其设置为 **['test.py', 'arg1', 'arg2', 'arg3']**。
+在 main() 函数中，我们使用 sys.argv[1:] 获取除了第一个元素以外的所有元素，即 **['arg1', 'arg2', 'arg3']**，并将其打印输出。
 
