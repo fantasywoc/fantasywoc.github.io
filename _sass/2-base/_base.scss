@@ -6,12 +6,10 @@ body {
   font-family: $base-font-family;
   font-size: $base-font-size;
   line-height: $base-line-height;
+  color: $text-color;
+  background-color: $background-color;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
-  // Default light theme
-  @include theme-colors($light-theme);
-  
   input, textarea {
 		border: 1px solid $border-color;
 		outline: none;
@@ -22,11 +20,6 @@ body {
 			border-color: #34a74e;
 		}
 	}
-  
-  // Dark theme
-  &.dark-theme {
-    @include theme-colors($dark-theme);
-  }
 }
 
 ::placeholder {
