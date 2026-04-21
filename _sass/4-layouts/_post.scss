@@ -5,8 +5,8 @@
   .post-title {
     margin-bottom: 10px;
     margin-top: 10px;
-    width: 100%;
-    max-width: 800px;
+    width: $post-title-width;
+    max-width: $post-title-max-width;
     font-size: 30px;
     line-height: 40px;
   }
@@ -20,7 +20,7 @@
 
     .post-title {
       margin: 10px 0;
-      width: 100%;
+      width: 90%;
       font-size: 47px;
       line-height: 53px;
     }
@@ -71,8 +71,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-color: $light-gray;
-    max-height: 880px;
-    max-width: 880px;
+    max-height: $post-image-max-width;
+    max-width: $post-image-max-width;
     margin-left: auto;
     margin-right: auto;
     border-radius: 5px;
@@ -87,8 +87,8 @@
 
 .post {
   margin: 30px auto;
-  width: 70%;
-  max-width: 900px;
+  width: $post-content-width;
+  max-width: $post-content-max-width;
   
   
 	
@@ -107,6 +107,8 @@
 
   img {
     margin: 30px 0;
+    max-width: 100%;
+    height: auto;
   }
 }
 
