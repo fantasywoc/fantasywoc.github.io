@@ -151,4 +151,29 @@
       display: inline-block;
     }
   }
+  
+  .nav__icon-search {
+    margin-right: 10px;
+  }
+  
+  .theme-toggle {
+    background: none;
+    border: none;
+    font-size: inherit;
+    padding: 0;
+    cursor: pointer;
+    color: $dark;
+    &:hover {
+      color: $black;
+    }
+  }
+  
+  body.dark-theme & {
+    .theme-toggle {
+      color: #e0e0e0;
+      &:hover {
+        color: #ffffff;
+      }
+    }
+  }
 }

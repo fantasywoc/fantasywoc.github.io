@@ -7,7 +7,43 @@ $(document).ready(function() {
     menuList = $(".main-nav"),
     searchOpenIcon = $(".nav__icon-search"),
     searchCloseIcon = $(".search__close"),
-    searchBox = $(".search");
+    searchBox = $(".search"),
+    themeToggle = $(".theme-toggle");
+
+  /* =======================
+  // Theme Toggle
+  ======================= */
+  // Check for saved theme preference or use system preference
+  if (localStorage.getItem('theme') === 'dark' || 
+      (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    $('body').addClass('dark-theme');
+  } else {
+    $('body').removeClass('dark-theme');
+  }
+
+  // Theme toggle functionality
+  function updateThemeIcon() {
+    if ($('body').hasClass('dark-theme')) {
+      themeToggle.removeClass('ion-md-moon').addClass('ion-md-sunny');
+    } else {
+      themeToggle.removeClass('ion-md-sunny').addClass('ion-md-moon');
+    }
+  }
+
+  // Initialize theme icon
+  updateThemeIcon();
+
+  // Theme toggle functionality
+  themeToggle.click(function() {
+    if ($('body').hasClass('dark-theme')) {
+      $('body').removeClass('dark-theme');
+      localStorage.setItem('theme', 'light');
+    } else {
+      $('body').addClass('dark-theme');
+      localStorage.setItem('theme', 'dark');
+    }
+    updateThemeIcon();
+  });
 
   /* =======================
   // Menu and Search
