@@ -3,8 +3,9 @@ layout: post
 title:  Godot 物理齿轮
 date:   2025-10-11 18:18:20 +0300
 image:  Gear.jpg
-tags:   study  godot C++
+tags:   study godot C++
 ---
+
 
 # Godot 齿轮系统 C++ 扩展
 
