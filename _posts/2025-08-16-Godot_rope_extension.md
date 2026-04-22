@@ -10,7 +10,7 @@ tags:   study  godot C++
 [![Stars](https://img.shields.io/github/stars/fantasywoc/Godot-Rope-Extension?label=Stars&color=yellow&logo=github)](https://github.com/fantasywoc/Vimag/stargazers)
 [![Forks](https://img.shields.io/github/forks/fantasywoc/Godot-Rope-Extension?label=Forks&color=blue&logo=github)](https://github.com/fantasywoc/Vimag/network/members)
 [![Downloads](https://img.shields.io/github/downloads/fantasywoc/Godot-Rope-Extension/total?label=Downloads)](https://github.com/fantasywoc/Godot-Rope-Extension/releases)
-## ⭐ 星标历史 Star History
+
 <a href="https://star-history.com/#fantasywoc/Godot-Rope-Extension&Date"> 
 <picture>   
 <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=fantasywoc/Godot-Rope-Extension&type=Date&theme=dark" />   
@@ -34,7 +34,7 @@ tags:   study  godot C++
 
 这是一个基于 Godot 4 和 C++ 的绳索项目，使用 C++ GDExtension  和 gdscript
 
-![afa20e](https://github.com/fantasywoc/Godot-Rope-Extension/blob/main/rope_cover.png)
+[Github](https://github.com/fantasywoc/Godot-Rope-Extension)
 
 ## RopeDemo快捷键
 
@@ -68,7 +68,7 @@ scons target=template_debug precision=single
 scons target=template_debug precision=double
 ```
 
-  
+
 ### 🎯 物理模拟
 - **Verlet 积分算法** 
 
@@ -127,4 +127,4 @@ Godot_c++/
 
 
 
-        
+​        

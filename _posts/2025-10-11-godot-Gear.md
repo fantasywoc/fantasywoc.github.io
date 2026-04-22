@@ -7,7 +7,7 @@ tags:   study godot C++
 ---
 
 
-# Godot 齿轮系统 C++ 扩展
+# [Godot 齿轮系统 C++ 扩展](https://github.com/fantasywoc/godot_GearWheel_extension)
 
 ## 项目介绍
 

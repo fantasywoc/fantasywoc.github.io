@@ -8,7 +8,7 @@ tags:   C++ godot
 
 
 
-# godot-cpp-extension
+# [godot-cpp-extension](https://github.com/fantasywoc/godot_cpp_extension)
 
 godot C++ 扩展例子
 # 编译
