@@ -1,10 +1,6 @@
 .post-title-box {
-  padding: 50px 0;
+  padding: 15px 0;
   border-top: 1px solid $light-gray;
-  background-color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
   .post-title {
     margin-bottom: 10px;
@@ -24,7 +20,7 @@
 
     .post-title {
       margin: 10px 0;
-      width: 90%;
+      width: 100%;
       font-size: 47px;
       line-height: 53px;
     }
@@ -93,11 +89,9 @@
   margin: 30px auto;
   width: $post-content-width;
   max-width: $post-content-max-width;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   
+  
+	
   &.post-no-image {
     margin: 0 auto 80px; 
   }
@@ -105,7 +99,6 @@
   @media only screen and (max-width: $mobile) {
     margin: 40px auto;
     width: 90%;
-    padding: 20px;
 
     &.post-no-image {
       margin: 0 auto 40px;
